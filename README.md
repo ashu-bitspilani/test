@@ -30,8 +30,7 @@ Second table
 | x’06’          |     | 0x0A         | Interrupts                    | Write Clear to Interrupt Mask Register |
 | x’07’          |     | 0x0B         | Status                        | Immediate Reset I2C                    |
 | x’08’          |     | 0x0C         | Extended Status               | Immediate Reset Errors                 |
-| x’09’          |     | 0x0D         | Residual Front End / Back End | Immediate Set S_SCL                    |
-|                |     |              | Length                        |                                        |
+| x’09’          |     | 0x0D         | Residual Front End / Back End Length | Immediate Set S_SCL             |                                
 | x’0A’          |     | 0x0E         | Port busy register            |                                        |
 | x’0B’          |     | 0x0F         | Not used                      | Immediate Reset S_SCL                  |
 | x’0C’          |     | 0x10         | Not used                      | Immediate Set S_SDA                    |
