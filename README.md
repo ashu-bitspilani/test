@@ -55,17 +55,13 @@ Third Table
 
 Forth Table
 
-| Command   | With Start | With |           |           |     |   |           |
-|-----------|------------|------|-----------|-----------|-----|---|-----------|
-| Stop      | With       | Ad-  |           |           |     |   |           |
-| dress     | Address    | Read | /         |           |     |   |           |
-| not Write | Read       |      |           |           |     |   |           |
-| Continue  | Length     |      |           |           |     |   |           |
-| First     | 1          | 0    | 1         | 7         | bit |   |           |
-| Addr.     | 1          | 1    | 64k Bytes |           |     |   |           |
-| Second    | 0          | 0    | 0         | dont care | 1   | 1 | 64k Bytes |
-| Third     | 0          | 0    | 0         | dont care | 1   | 1 | 64k Bytes |
-| Last      | 0          | 1    | 0         | dont care | 1   | 0 | 8k Bytes  |
+| Command | With Start | With Stop  | With Ad-dress | Address   | Read / not Write    | Read Continue    | Length    |
+|---------|------------|------|----------|-----------|-----------|----------|-----------|
+| First   | 1          | 0    | 1        | 7 bit Addr.    | 1         | 1        | 64k Bytes |                                
+| Second  | 0          | 0    | 0        | dont care | 1         | 1        | 64k Bytes |
+| Third   | 0          | 0    | 0        | dont care | 1         | 1        | 64k Bytes |
+| Last    | 0          | 1    | 0        | dont care | 1         | 0        | 8k Bytes  |
+
 
 
 
