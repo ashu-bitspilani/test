@@ -18,23 +18,22 @@
 Second table
 
 
-| FSI i2cc dress | Ad- | PIB i2cc Ad- | Read                          | Write                                  |
-|----------------|-----|--------------|-------------------------------|----------------------------------------|
-|                |     | dress        |                               |                                        |
-| x’00’          |     | 0x04         | FIFO                          |                                        |
-| x’01’          |     | 0x05         | Command Register              |                                        |
-| x’02’          |     | 0x06         | Mode Register                 |                                        |
-| x’03’          |     | 0x07         | Watermark Register            |                                        |
-| x’04’          |     | 0x08         | Interrupt Mask Register       |                                        |
-| x’05’          |     | 0x09         | Interrupt Conditions          | Write Set to Interrupt Mask Register   |
-| x’06’          |     | 0x0A         | Interrupts                    | Write Clear to Interrupt Mask Register |
-| x’07’          |     | 0x0B         | Status                        | Immediate Reset I2C                    |
-| x’08’          |     | 0x0C         | Extended Status               | Immediate Reset Errors                 |
-| x’09’          |     | 0x0D         | Residual Front End / Back End Length | Immediate Set S_SCL             |                                
-| x’0A’          |     | 0x0E         | Port busy register            |                                        |
-| x’0B’          |     | 0x0F         | Not used                      | Immediate Reset S_SCL                  |
-| x’0C’          |     | 0x10         | Not used                      | Immediate Set S_SDA                    |
-| x’0D’          |     | 0x11         | Not used                      | Immediate Reset S_SDA                  |
+| FSI i2cc dress Ad-   |   PIB i2cc Ad- dress | Read                 | Write                                  |
+|---------------------|--------------|-------------------------------|----------------------------------------|                                                                                                    
+| x’00’               | 0x04         | FIFO                          |                                        |
+| x’01’               | 0x05         | Command Register              |                                        |
+| x’02’               | 0x06         | Mode Register                 |                                        |
+| x’03’               | 0x07         | Watermark Register            |                                        |
+| x’04’               | 0x08         | Interrupt Mask Register       |                                        |
+| x’05’               | 0x09         | Interrupt Conditions          | Write Set to Interrupt Mask Register   |
+| x’06’               | 0x0A         | Interrupts                    | Write Clear to Interrupt Mask Register |
+| x’07’               | 0x0B         | Status                        | Immediate Reset I2C                    |
+| x’08’               | 0x0C         | Extended Status               | Immediate Reset Errors                 |
+| x’09’               | 0x0D         | Residual Front End / Back End Length | Immediate Set S_SCL             |                                
+| x’0A’               | 0x0E         | Port busy register            |                                        |
+| x’0B’               | 0x0F         | Not used                      | Immediate Reset S_SCL                  |
+| x’0C’               | 0x10         | Not used                      | Immediate Set S_SDA                    |
+| x’0D’               | 0x11         | Not used                      | Immediate Reset S_SDA                  |
 
 
 Third Table
