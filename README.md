@@ -106,76 +106,28 @@ Forth Table
 
 
 
+new
 
-
-jhhjf
-
-| Register Name                             | SPI: Error Register                                                                                               |
-|-------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| Mnemonic                                  | spictl_error_inject_                                                                                              |                                              | Address offset                            | 0x00                                                                                                              |
-| Description                               | SPI: error register                                                                                               |                                              | Position       | Len | Field Mnemonic     | Type                 | Init Value|     Description                                                                |
-| 0 to 7         | 8   | error_inject_pulse | RWX                  | ’x00’  | Error injection                                                                                                                                                                                                bit 0: counter configuration register parity error                                                                                                                                                             bit 1: clock configuration register parity error                                                                                                                                                               bit 2: sequencer configuration register parity error                                                                                                                                                           bit 3: sequencer fsm error
-                                                                              bit 4: shifter fsm error
-                                                                              bit 5: pattern match reg parity error
-                                                                              bit 6: transmit data reg parity error
-                                                                              bit 7: receive data reg parity error                                              |
-| 8 to 15        | 8   | error_inject_mask  | RWX                  | ’x00’  | Error injection mask:                                                                                                                                                                                          bit 0: counter configuration register parity error
-                                                                              bit 1: clock configuration register parity error
-                                                                              bit 2: sequencer configuration register parity error                                                                                                                                                           bit 3: sequencer fsm error
-                                                                              bit 4: shifter fsm error
-                                                                              bit 5: pattern match reg parity error
-                                                                              bit 6: transmit data reg parity error
-                                                                              bit 7: receive data reg parity error                                              |
-| 16 to 31       | 16  | error_mask         | RWX                  | 0x0000 | General error mask for fir:                                                                                                                                                                                    bit 0: counter configuration register parity error
-                                                                              bit 1: clock configuration register parity error
-                                                                              bit 2: sequencer configuration register parity error                                                                                                                                                           bit 3: sequencer fsm error
-                                                                              bit 4: shifter fsm error
-                                                                              bit 5: pattern match reg parity error
-                                                                              bit 6: transmit data reg parity error
-                                                                              bit 7: receive data reg parity error
-                                                                              bit 8: configuration register 1 parity error
-                                                                              bit 9: sequencer fsm error mask
-                                                                              bit 10: shifter fsm error mask
-                                                                              bit 11: bit 12: bit 13 to 15: unused                                              |
-| 32 to 63       | 32  | error_unused       | RWX                  | 0x0000 | Bit 0 to 31: unused                                                               |
+| Register Name  |     |                    | SPI: Error Register  |        |                                                                                                                                                                                                                                                                                                  |
+|----------------|-----|--------------------|----------------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Mnemonic       |     |                    | spictl_error_inject_ |        |                                                                                                                                                                                                                                                                                                  |
+| Address offset |     |                    | 0x00                 |        |                                                                                                                                                                                                                                                                                                  |
+| Description    |     |                    | SPI: error register  |        |                                                                                                                                                                                                                                                                                                  |
+| Position       | Len | Field Mnemonic     | Type                 | Init   | Description                                                                                                                                                                                                                                                                                      |
+|                |     |                    |                      | Value  |                                                                                                                                                                                                                                                                                                  |
+| 0 to 7         | 8   | error_inject_pulse | RWX                  | ’x00’  | Error injection                                                                                                                                                                                                                                                                                  |
+|                |     |                    |                      |        | bit 0: counter configuration register parity error bit 1: clock configuration register parity error bit 2: sequencer configuration register parity error                                                                                                                                         |
+|                |     |                    |                      |        | bit 3: sequencer fsm error bit 4: shifter fsm error bit 5: pattern match reg parity error bit 6: transmit data reg parity error bit 7: receive data reg parity error                                                                                                                             |
+| 8 to 15        | 8   | error_inject_mask  | RWX                  | ’x00’  | Error injection mask:                                                                                                                                                                                                                                                                            |
+|                |     |                    |                      |        | bit 0: counter configuration register parity error bit 1: clock configuration register parity error bit 2: sequencer configuration register parity error                                                                                                                                         |
+|                |     |                    |                      |        | bit 3: sequencer fsm error bit 4: shifter fsm error bit 5: pattern match reg parity error bit 6: transmit data reg parity error bit 7: receive data reg parity error                                                                                                                             |
+| Position       | Len | Field Mnemonic     | Type                 | Init   | Description                                                                                                                                                                                                                                                                                      |
+|                |     |                    |                      | Value  |                                                                                                                                                                                                                                                                                                  |
+| 16 to 31       | 16  | error_mask         | RWX                  | 0x0000 | General error mask for fir:                                                                                                                                                                                                                                                                      |
+|                |     |                    |                      |        | bit 0: counter configuration register parity error bit 1: clock configuration register parity error bit 2: sequencer configuration register parity error                                                                                                                                         |
+|                |     |                    |                      |        | bit 3: sequencer fsm error bit 4: shifter fsm error bit 5: pattern match reg parity error bit 6: transmit data reg parity error bit 7: receive data reg parity error bit 8: configuration register 1 parity error bit 9: sequencer fsm error mask bit 10: shifter fsm error mask bit 11: bit 12: |
+|                |     |                    |                      |        | bit 13 to 15: unused                                                                                                                                                                                                                                                                             |
+| 32 to 63       | 32  | error_unused       | RWX                  | 0x0000 | Bit 0 to 31: unused                                                                                                                                                                                                                                                                              |
 
 
 
-
-
-
-
-hhhj
-
-
-| Register Name                             | SPI: Error Register                                                                                               |
-|-------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| Mnemonic                                  | spictl_error_inject_                                                                                              |                                              | Address offset                            | 0x00                                                                                                              |
-| Description                               | SPI: error register                                                                                               |
-|-------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| Position       | Len | Field Mnemonic     | Type                 | Init Value|     Description                                                                |
-|----------------|-----|--------------------|----------------------|-----------|--------------------------------------------------------------------------------|
-| 0 to 7         | 8   | error_inject_pulse | RWX                  | ’x00’  | Error injection                                                                                                                                                                                                bit 0: counter configuration register parity error                                                                                                                                                             bit 1: clock configuration register parity error                                                                                                                                                               bit 2: sequencer configuration register parity error                                                                                                                                                           bit 3: sequencer fsm error
-                                                                              bit 4: shifter fsm error
-                                                                              bit 5: pattern match reg parity error
-                                                                              bit 6: transmit data reg parity error
-                                                                              bit 7: receive data reg parity error                                              |
-| 8 to 15        | 8   | error_inject_mask  | RWX                  | ’x00’  | Error injection mask:                                                                                                                                                                                          bit 0: counter configuration register parity error
-                                                                              bit 1: clock configuration register parity error
-                                                                              bit 2: sequencer configuration register parity error                                                                                                                                                           bit 3: sequencer fsm error
-                                                                              bit 4: shifter fsm error
-                                                                              bit 5: pattern match reg parity error
-                                                                              bit 6: transmit data reg parity error
-                                                                              bit 7: receive data reg parity error                                              |
-| 16 to 31       | 16  | error_mask         | RWX                  | 0x0000 | General error mask for fir:                                                                                                                                                                                    bit 0: counter configuration register parity error
-                                                                              bit 1: clock configuration register parity error
-                                                                              bit 2: sequencer configuration register parity error                                                                                                                                                           bit 3: sequencer fsm error
-                                                                              bit 4: shifter fsm error
-                                                                              bit 5: pattern match reg parity error
-                                                                              bit 6: transmit data reg parity error
-                                                                              bit 7: receive data reg parity error
-                                                                              bit 8: configuration register 1 parity error
-                                                                              bit 9: sequencer fsm error mask
-                                                                              bit 10: shifter fsm error mask
-                                                                              bit 11: bit 12: bit 13 to 15: unused                                              |
-| 32 to 63       | 32  | error_unused       | RWX                  | 0x0000 | Bit 0 to 31: unused                                                               |
