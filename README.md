@@ -64,3 +64,48 @@ Forth Table
 
 
 
+
+|  Feature                    | Description                                                       | Reference                                                                        |
+|:----------------------------|:------------------------------------------------------------------|----------------------------------------------------------------------------------|
+|  PIB responder interface    | The SPI controller unit provides a generic request / acknowledge  | [Host Bus Interfaces](#anchor-1)                                                 |
+|                             | handshake interface which may interface to other bus systems.     |                                                                                  |
+|                             | A project specific bus interface component may be required.       |                                                                                  |
+|  Configurable SPI serial    | The SPI serial clock (SCK) is derived from the internal operating | [Clock Configuration, Trace Select, Reset Control, ECC enable](#anchor-2)        |
+|  clock                      | clock. Using a configurable clock divider SCK can be configured   |                                                                                  |
+|                             | to adapt to a wide range of clock frequency requirements.         |                                                                                  |
+|  Highly Configurable        | Multiple shift counters and delay counters and elements enable    | [Sequencer Basic Operations](#anchor-3)                                          |
+|                             | the SPI controller to handle a broad range of SPI responder       |                                                                                  |
+|                             | devices. An internal sequencer enables flexible combinations of   |                                                                                  |
+|                             | basic SPI operations.                                             |                                                                                  |
+|  Hard and soft reset        | Resetting the SPI controller can be done via digital signal input | [Reset](#anchor-4)                                                               |
+|                             | or via command interface.                                         |                                                                                  |
+|  All functions available    | All SPI function control is mapped into the SPI register space    | [Programmer's Reference](#anchor-5)                                              |
+|  via register interface     | to enable full control by firmware.                               |                                                                                  |
+|  Support for serial         | In single mode data is shifted out serially on a single data line | [SPI Transmit and Receive Modes](#anchor-6)                                      |
+|  MISO/MOSI                  | and received serially on a single data line. SPI clock mode 0 is  | [SPI Clock Modes](#anchor-7)                                                     |
+|                             | implemented.                                                      |                                                                                  |
+|  Single Controller          | One SPI controller is implemented and supported, there is no      |                                                                                  |
+|  bus structure              | support for multiple controllers on the SPI bus.                  |                                                                                  |
+|  Multiple SPI responders    | Each SPI controller is capable to drive up to 4 SPI chip select   | [Select Responders](#anchor-8)                                                   |
+|                             | signals. Hence one controller may drive up to 4 SPI responders    |                                                                                  |
+|                             | directly.                                                         |                                                                                  |
+|  Internal parity protection | SPI internal registers are parity protected.                      | [Internal Parity Protection](#anchor-9)                                          |
+|  Loop back mode             | Internal loop back mode is supported for testing purposes.        | [Clock Configuration, Trace Select, Reset Control, ECC enable](#anchor-2)        |
+|  Pacing                     | Pacing mode is supported.                                         | [Pacing, Transmit Mode](#anchor-10)                                              |
+|                             |                                                                   | [Pacing, Receive Mode](#anchor-11)                                               |
+|  Secure Access control      | Security related aspects of external attached EEPROM memory are   | [SPI Security component](#anchor-12)                                             |
+|                             | implemented by the Secure Access Control component.               |                                                                                  |
+|  Memory mapped serial memory| When Flash or SEEPROM memory is attached to the SPI bus, its      | [Memory Mapped SPI attached Serial Memory](#anchor-13)                           |
+|                             | content may be mapped directly to the corresponding address space.|                                                                                  |
+|  ECC support                | When reading from SPI responder memory, ECC support is available. | [ECC Support](#anchor-14)                                                        |
+|                             | Address correction applies when ECC is active.                    |                                                                                  |
+
+
+
+
+
+
+
+
+
+
